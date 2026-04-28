@@ -1,0 +1,23 @@
+# kubectl apply -f anghelo-goicochea-07-deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anghelo-goicochea-07-deployment
+  namespace: anghelo-goicochea-07-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: anghelo-goicochea-07-deployment
+  template:
+    metadata:
+      labels:
+        app: anghelo-goicochea-07-deployment
+    spec:
+      containers:
+      - name: anghelo-goicochea-07-container
+        image: anghelo880/anghelo-webflux:3.0
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - secretRef:
+            name: anghelo-goicochea-07-secret

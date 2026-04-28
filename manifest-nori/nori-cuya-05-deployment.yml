@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nori-cuya-05-deployment
+  namespace: nori-cuya-05-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nori-cuya-05
+  template:
+    metadata:
+      labels:
+        app: nori-cuya-05
+    spec:
+      containers:
+      - name: nori-cuya-05-container
+        image: nori880/nori-webflux:3.0
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - secretRef:
+            name: nori-cuya-05-secret

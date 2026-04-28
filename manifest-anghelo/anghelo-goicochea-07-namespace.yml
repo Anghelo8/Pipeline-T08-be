@@ -1,0 +1,6 @@
+# kubectl create namespace anghelo-goicochea-07-namespace (COMANDO)
+# kubectl apply -f anghelo-goicochea-07-namespace.yml (yml)
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: anghelo-goicochea-07-namespace

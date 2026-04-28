@@ -1,0 +1,50 @@
+# MINIKUBE FUNCIONA EN CODESPACE | LOCAL
+# KUBECTL FUNCIONA DIRECTO EN KILLERCODA (SIN MINIKUBE)
+
+# consultar versión de minikube
+minikube version
+
+# consultar si minikube esta en start o stop
+minikube status
+
+# iniciar clúster kubernetes
+minikube start
+
+# ingresar a la carpeta de los manifiestos de kubernetes (manifest)
+cd manifest
+
+# listar namespace
+kubectl get namespace
+kubectl get ns
+
+# crear un namespace "juan" por comando mediante un archivo: "juan-condori-00-namespace.yml"
+kubectl apply -f anghelo-goicochea-07-namespace.yml
+
+# consultar namespace en uso por "default" | LINUX
+kubectl config view --minify | grep namespace
+
+# consultar namespace en uso por "default" | WINDOWS
+kubectl config view --minify | findstr namespace
+
+# cambiar un namespace en uso por "default" a "juan-condori-00-namespace"
+kubectl config set-context --current --namespace=anghelo-goicochea-07-namespace
+
+# consultar todos los recursos de un namespace "juan-condori-00-namespace"
+kubectl get all -n anghelo-goicochea-07-namespace
+
+# consultar todos los recursos y secret de un namespace "juan-condori-00-namespace"
+kubectl get all,secrets -n anghelo-goicochea-07-namespace
+
+
+# listar services del namespace "anghelo-goicochea-07-namespace"
+minikube service anghelo-goicochea-07-service -n anghelo-goicochea-07-namespace
+minikube service list
+
+# probar el microservicio dentro del clúster con curl
+curl http://192.168.49.2:30001/api/customers
+curl http://192.168.49.2:30001/api/customers/1
+
+# crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes
+kubectl port-forward service/anghelo-goicochea-07-service 8081:30001
+
+
