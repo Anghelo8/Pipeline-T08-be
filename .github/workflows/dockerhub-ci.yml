@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v5 # Actualizado a v5
         with:
           context: .
-          # OJO: Aquí he puesto la ruta de tu carpeta según tu imagen
+          
           file: ./dockerfile-anghelo/Dockerfile 
           push: true
           tags: |
