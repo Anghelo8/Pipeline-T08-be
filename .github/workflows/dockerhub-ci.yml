@@ -30,7 +30,6 @@ jobs:
         uses: docker/build-push-action@v5 # Actualizado a v5
         with:
           context: .
-          
           file: ./dockerfile-anghelo/Dockerfile 
           push: true
           tags: |
