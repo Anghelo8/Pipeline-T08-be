@@ -22,7 +22,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3 # Actualizado a v3
         with:
-          # USANDO TUS VARIABLES PERSONALIZADAS
+          # USANDO MIS VARIABLES PERSONALIZADAS
           username: ${{ secrets.DOCKERHUB_USERNAME_ANGHELO }}
           password: ${{ secrets.DOCKERHUB_TOKEN_ANGHELO }}
 
