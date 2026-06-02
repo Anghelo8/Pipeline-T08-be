@@ -6,8 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.0</version>
-		<relativePath/> 
+		<version>2.7.0</version> <relativePath/> 
 	</parent>
 
 	<groupId>pe.edu.vallegrande</groupId>
@@ -17,22 +16,8 @@
 	<description>Demo project for Spring Boot</description>
 	<url/>
 
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-
 	<properties>
-		<java.version>11</java.version>
-	</properties>
+		<java.version>1.8</java.version> </properties>
 
 	<dependencies>
 		<dependency>
@@ -57,7 +42,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-webflux-ui</artifactId>
-			<version>1.6.0</version> 
+			<version>1.6.9</version> 
 		</dependency>
 
 		<dependency>
@@ -68,7 +53,7 @@
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
-			<version>0.9.0</version>
+			<version>0.9.1</version>
 		</dependency>
 		
 		<dependency>
