@@ -5,7 +5,7 @@ me dara vulnerabildiades <?xml version="1.0" encoding="UTF-8"?>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.14</version>
+		<version>3.5.11</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pe.edu.vallegrande</groupId>
